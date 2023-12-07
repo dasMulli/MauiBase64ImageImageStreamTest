@@ -10,7 +10,7 @@
             VerticalOptions="Center">
 
 			<Label
-                Text="Click on the button and open 10 pages"
+                Text="Click on the button and open some pages"
                 SemanticProperties.HeadingLevel="Level1"
                 FontSize="18"
                 HorizontalOptions="Center" />
@@ -20,14 +20,19 @@
                 SemanticProperties.HeadingLevel="Level2"
                 FontSize="12"
                 HorizontalOptions="Center" />
-            
 
-            <Button
-                Text="Do things"
+
+			<Button
+                Text="Do things (chrashes app most of the time)"
                 Clicked="OnDoThingsClicked"
                 HorizontalOptions="Center" />
 
-        </VerticalStackLayout>
+			<Button
+                Text="Do things from cache (this works)"
+                Clicked="OnDoThingsFromCacheClicked"
+                HorizontalOptions="Center" />
+		
+		</VerticalStackLayout>
     </ScrollView>
 
 </ContentPage>

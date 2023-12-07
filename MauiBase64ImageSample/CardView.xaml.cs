@@ -5,11 +5,16 @@ namespace MauiBase64ImageSample;
 public partial class CardView : ContentView
 {
     MyObject CardObject;
-	public CardView(MyObject cardObject, string description)
+	public CardView(MyObject cardObject, string description, bool useCacheFile)
 	{
 		InitializeComponent();
         CardObject = cardObject;
         LblDescription.Text =description;
-        CardImage.Source = CardObject.AssetImageSource;
+        if (useCacheFile)
+            CardImage.Source = CardObject.CachedFileName;
+        else
+        {
+            CardImage.Source = CardObject.AssetImageSource;
+        }
 	}
 }

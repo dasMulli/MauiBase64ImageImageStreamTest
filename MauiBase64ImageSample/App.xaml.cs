@@ -8,4 +8,16 @@ public partial class App : Application
 
 		MainPage = new NavigationPage(new MainPage());
 	}
+
+    protected override Window CreateWindow(IActivationState activationState)
+    {
+        Window window = base.CreateWindow(activationState);
+
+        window.Created += (s, e) =>
+        {
+           Base64ImageProvider.ClearCache();
+        };
+
+        return window;
+    }
 }

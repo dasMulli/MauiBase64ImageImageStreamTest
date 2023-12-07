@@ -49,6 +49,7 @@
     </MauiXaml>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="IronSoftware.System.Drawing" Version="2023.12.1" />
     <PackageReference Include="Microsoft.Maui.Controls" Version="8.0.3" />
     <PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.3" />
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
