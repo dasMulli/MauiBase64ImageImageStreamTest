@@ -14,11 +14,7 @@ public static class Base64ImageProvider
         try
         {
             var imageBytes = Convert.FromBase64String(Base64Imagestring);
-
-            MemoryStream imageDecodeStream = new(imageBytes);
-
-
-            ImageSource myIs = ImageSource.FromStream(() => imageDecodeStream);
+            var myIs = ImageSource.FromStream(() => new MemoryStream(imageBytes));
             return myIs;
         }
         catch (Exception ex)
